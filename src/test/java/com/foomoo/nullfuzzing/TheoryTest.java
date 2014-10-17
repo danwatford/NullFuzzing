@@ -1,15 +1,20 @@
-package com.foomoo.testobj;
+package com.foomoo.nullfuzzing;
 
 import org.junit.Assume;
 import org.junit.Rule;
-import org.junit.contrib.theories.DataPoints;
-import org.junit.contrib.theories.Theories;
-import org.junit.contrib.theories.Theory;
+import org.junit.experimental.theories.DataPoints;
+import org.junit.experimental.theories.Theories;
+import org.junit.experimental.theories.Theory;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 
+import com.foomoo.nullfuzzing.Dep1;
+import com.foomoo.nullfuzzing.Dep2;
+import com.foomoo.nullfuzzing.Dep3;
+import com.foomoo.nullfuzzing.TestObj;
+
 @RunWith(Theories.class)
-public class ContribTheoryTest {
+public class TheoryTest {
 
 	@DataPoints
 	public static final Dep1[] D1S = new Dep1[] { new Dep1(), null };

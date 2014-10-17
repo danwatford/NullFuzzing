@@ -1,6 +1,4 @@
-package com.foomoo.testobj;
-
-import static org.mockito.Mockito.mock;
+package com.foomoo.nullfuzzing;
 
 import org.junit.Assume;
 import org.junit.Rule;
@@ -10,17 +8,22 @@ import org.junit.contrib.theories.Theory;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 
+import com.foomoo.nullfuzzing.Dep1;
+import com.foomoo.nullfuzzing.Dep2;
+import com.foomoo.nullfuzzing.Dep3;
+import com.foomoo.nullfuzzing.TestObj;
+
 @RunWith(Theories.class)
-public class ContribTheoryTestWithMocks {
+public class ContribTheoryTest {
 
 	@DataPoints
-	public static final Dep1[] D1S = new Dep1[] { mock(Dep1.class), null };
+	public static final Dep1[] D1S = new Dep1[] { new Dep1(), null };
 
 	@DataPoints
-	public static final Dep2[] D2S = new Dep2[] { mock(Dep2.class), null };
+	public static final Dep2[] D2S = new Dep2[] { new Dep2(), null };
 
 	@DataPoints
-	public static final Dep3[] D3S = new Dep3[] { mock(Dep3.class), null };
+	public static final Dep3[] D3S = new Dep3[] { new Dep3(), null };
 
 	@Rule
 	public ExpectedException expected = ExpectedException.none();
