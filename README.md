@@ -1,7 +1,7 @@
 Experiments with a Null Fuzzer - a method of substituting a null value for each of a constructor's 
 arguments, in turn, to ensure correct error handling - i.e. throwing of IllegalArgumentException.
 
-This isn't anything usable at the moemnt, its just me trying a few things out.
+This isn't anything usable at the moment, its just me trying a few things out.
 
 Why
 ---
@@ -32,7 +32,7 @@ of code to be maintained.
 The next step could be a Null Fuzzing annotation for a theory which could act as an alias for the @ForAll and @From annotation 
 needed on each of a Theory's parameters.
 
-Is this a good test
+Is this a good test?
 -------------------
 Regardless of whether you think it is worth 'fuzzing' constructor arguments with null to prove null checking is working, there is
 so much of this sort of test code out there that it will be worth finding a way to continue to exercise the null checking in a

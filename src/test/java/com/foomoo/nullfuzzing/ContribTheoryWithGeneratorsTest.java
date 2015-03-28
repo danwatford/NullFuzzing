@@ -14,6 +14,9 @@ import com.foomoo.nullfuzzing.TestObj;
 import com.pholser.junit.quickcheck.ForAll;
 import com.pholser.junit.quickcheck.From;
 
+/**
+ * Note that this test is running with the contributed JUnit Theories rather than experimental Theories.
+ */
 @RunWith(Theories.class)
 public class ContribTheoryWithGeneratorsTest {
 

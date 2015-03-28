@@ -13,6 +13,9 @@ import com.foomoo.nullfuzzing.Dep2;
 import com.foomoo.nullfuzzing.Dep3;
 import com.foomoo.nullfuzzing.TestObj;
 
+/**
+ * Note that this test is running with the contributed JUnit Theories rather than experimental Theories.
+ */
 @RunWith(Theories.class)
 public class ContribTheoryTest {
 
