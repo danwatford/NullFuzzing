@@ -11,14 +11,14 @@ public class MockGenerator<T> extends Generator<T> {
 
 	private T mockValue;
 
-	public MockGenerator(Class<T> type) {
+	public MockGenerator(final Class<T> type) {
 		super(type);
 		mockValue = mock(type);
 		when(mockValue.toString()).thenReturn(type.toString());
 	}
 
 	@Override
-	public T generate(SourceOfRandomness random, GenerationStatus status) {
+	public T generate(final SourceOfRandomness random, final GenerationStatus status) {
 		T retVal = mockValue;
 		mockValue = null;
 		return retVal;

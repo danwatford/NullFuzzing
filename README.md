@@ -22,9 +22,9 @@ JUnit has the @Theory annotation for theories, a type of test which is called re
 Within the theory we can have assumptions filter out the invalid tests - i.e. those where none
 of the dependencies is null, and then call the constructor and assert that the appropriate exception was thrown.
 
-JUnit-QuickCheck (https://github.com/pholser/junit-quickcheck) gives us Generators for use with Theories. This project has a
-MockGenerator to generate Mockito mocks for a theory's arguments. See src/test/java/ContribTheoryWithGeneratorsTest and
-src/test/java/MockGenerator. This implementation depends on using the @ForAll and the @From annotations provided by JUnit-QuickCheck.
+JUnit-QuickCheck (https://github.com/pholser/junit-quickcheck) gives us Generators for use with Theories. Based on JUnit-QuickCheck,
+this project has a MockGenerator to generate Mockito mocks for a theory's arguments. See src/test/java/ContribTheoryWithGeneratorsTest and
+src/test/java/MockGenerator. This implementation depends on using the JUnit-QuickCheck @ForAll and @From annotations.
 
 Using the MockGenerator with JUnit-QuickCheck can replace all those individual tests mentioned earlier, reducing the amount 
 of code to be maintained.

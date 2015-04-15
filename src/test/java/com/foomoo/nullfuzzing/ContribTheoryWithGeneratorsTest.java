@@ -24,7 +24,7 @@ public class ContribTheoryWithGeneratorsTest {
 	public ExpectedException expected = ExpectedException.none();
 
 	// This will cause an error as expected due to the missing null check in
-	// TestObj's constructor.
+	// the test object's constructor.
 	@Theory
 	public void throwsIfArgIsNull(
 			@ForAll(sampleSize = 2) @From(MockGenerator.class) Dep1 d1,
@@ -34,6 +34,6 @@ public class ContribTheoryWithGeneratorsTest {
 		Assume.assumeTrue(d1 == null || d2 == null || d3 == null);
 
 		expected.expect(IllegalArgumentException.class);
-		new TestObj(d1, d2, d3);
+		new TestFailingObj(d1, d2, d3);
 	}
 }

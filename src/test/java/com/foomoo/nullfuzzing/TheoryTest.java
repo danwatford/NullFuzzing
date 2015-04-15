@@ -32,12 +32,12 @@ public class TheoryTest {
 	public ExpectedException expected = ExpectedException.none();
 
 	// This will cause an error as expected due to the missing null check in
-	// TestObj's constructor.
+	// the test object's constructor.
 	@Theory
 	public void throwsIfArgIsNull(Dep1 d1, Dep2 d2, Dep3 d3) {
 		Assume.assumeTrue(d1 == null || d2 == null || d3 == null);
 
 		expected.expect(IllegalArgumentException.class);
-		new TestObj(d1, d2, d3);
+		new TestFailingObj(d1, d2, d3);
 	}
 }
